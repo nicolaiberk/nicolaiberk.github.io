@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+## Welcome to my webpage
 
-You can use the [editor on GitHub](https://github.com/nicolaiberk/nicolaiberk.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+I am a PhD candidate at the Research Training Group "The Dynamics of Demography, Democratic Processes and Public Policy" (DYNAMICS)[https://www.sowi.hu-berlin.de/en/dynamics/about], jointly organised by the (Hertie School of Governance)[https://www.hertie-school.org/en/] and the (Department of Social Sciences)[https://www.sowi.hu-berlin.de/de] at Humboldt-Universität zu Berlin. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Before that I obtained my BA from the University of Vienna, where I also contributed under the guidance of (Univ.-Prof. Markus Wagner, PhD)[https://www.wagnermarkus.net/] to the Austrian election study (AUTNES)[https://autnes.at/] as a research assistant. I spent a semester at the Australian National University in Canberra and interned at the (Max-Planck Institute for the Study of Societies)[https://www.mpifg.de/] in Cologne. Funded by the (German Academic Exchange Service)[https://www.daad.de/en/], I pursued my MSc in Social Sciences at the University of Amsterdam, focusing on electoral competition and automated text analysis. There, I also worked as a research assistant to (Assoc.-Prof. Dr. Gijs Schumacher)[http://www.gijsschumacher.nl/]. I also participated regularly in the (Hot Politics Lab)[http://www.hotpolitics.eu/].
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nicolaiberk/nicolaiberk.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+I am broadly interested in questions of political competition, public opinion and political rhetoric in Western Democracies. More concretely, I combine text analysis with econometric methods to study how political parties shape the political discourse. My special interest lies in the effects of radical right rhetoric.
