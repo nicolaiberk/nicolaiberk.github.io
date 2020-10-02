@@ -1,6 +1,2 @@
 theme: jekyll-theme-slate
 title: Hi!
-
-[[main.menu]]
-    name = "Projects"
-    url = "projects"
