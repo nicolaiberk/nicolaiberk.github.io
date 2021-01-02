@@ -2,3 +2,12 @@
 .Rhistory
 .RData
 .Ruserdata
+_site.yml
+/blog post material
+index.Rmd
+/pics
+projects.Rmd
+pubs.Rmd
+/style.css
+ws2020Rmd.Rproj
+/site_libs
