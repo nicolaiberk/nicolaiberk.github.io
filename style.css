@@ -54,8 +54,13 @@ a p {
   display:none;
 }
 
-a:hover p{
+a:hover p {
   display:block;
+}
+
+span {
+  color: #0e5484;
+  font-weight: bold;
 }
 
 .btn {

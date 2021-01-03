@@ -1,0 +1,12 @@
+name: "nicolai.berk"
+navbar:
+  title: "Nicolai Berk"
+  left:
+    - text: "About"
+      href: index.html
+    - text: "Academic Work"
+      href: pubs.html
+#    - text: "Blog"
+#      href: projects.html
+    - text: "CV"
+      href: https://www.dropbox.com/s/svybms31tvyo524/CV.pdf?dl=0
