@@ -1,3 +1,0 @@
-# to update published folder, move to project root in git bash
-git add _site && git commit -m "commit message"
-git subtree push --prefix _site origin gh-pages
