@@ -5,6 +5,7 @@ output:
     css: "style.css"
     includes:
       after_body: footer.html
+      in_header: header.html
 ---
 
 <head>
@@ -53,4 +54,3 @@ p2
 ```{r shiny, echo = F}
 knitr::include_app(" https://nicolai-student.shinyapps.io/test/", height = "600pt") 
 ```
-
