@@ -1,0 +1,10 @@
+# to update published folder, move to project folder in git bash
+
+# push changes to subfolder (from master)
+git add _site && git commit -m "commit message"
+git subtree push --prefix _site origin gh_pages
+
+# if local folder ahead: checkout subtree, update remote changes if necessary, and go back to master
+git checkout gh_pages
+git pull
+git checkout master

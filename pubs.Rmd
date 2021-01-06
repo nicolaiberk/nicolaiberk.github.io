@@ -59,8 +59,7 @@ October 2018 -- November 2019
 #### Measuring Rhetorical Similarity with Supervised Machine Learning
 **Presentation of working paper**
 
-<a href="https://www.dropbox.com/s/5zo85ak86hkujl0/Draft141020%20%281%29.pdf?dl=0"   class = "fa fa-image" title = "Slides" ></a><a href="https://github.com/nicolaiberk/SMLSE/raw/master/main.pdf" class = "fa fa-file" title = "Paper" ></a>
-<a href="https://github.com/nicolaiberk/SMLSE" class="fa fa-github" title = "GitHub"></a>
+<a href="https://www.dropbox.com/s/5zo85ak86hkujl0/Draft141020%20%281%29.pdf?dl=0"   class = "fa fa-image" title = "Slides" ></a> <a href="https://github.com/nicolaiberk/SMLSE/raw/master/main.pdf" class = "fa fa-file" title = "Paper" ></a> <a href="https://github.com/nicolaiberk/SMLSE" class="fa fa-github" title = "GitHub"></a>
 
 October 2020, EPSIP Colloquium, HU Berlin, Germany
 
