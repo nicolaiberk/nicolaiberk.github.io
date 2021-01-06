@@ -1,0 +1,3 @@
+# to update published folder, move to master in git bash (always push to subtree first)
+git add _site && git commit -m "commit message"
+git subtree push --prefix _site origin gh_pages
