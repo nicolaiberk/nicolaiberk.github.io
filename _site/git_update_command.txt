@@ -1,3 +1,0 @@
-# to update published folder, move to project folder in git bash
-git checkout gh_pages
-git subtree pull --prefix _site origin master
