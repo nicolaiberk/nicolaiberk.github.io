@@ -23,6 +23,26 @@ output:
 
 <br>
 
+#### Using transfer learning to measure ideological bias
+**Project (with Tom Arend) assessing the performance of deep neural networks transferred from one domain (party press releases) to another (news)**
+
+<a href="https://github.com/nicolaiberk/nlpdl_project" class="fa fa-github" title = "GitHub"></a>
+  
+
+March 2021 -- today
+
+
+<br>
+
+#### Right-Wing Terrorist Attacks, the Media’s Reactions, and Radical Right Party Support
+**Project (with Werner Krause) studying media reactions to radical-right terrorism in Germany**
+
+February 2021 -- today
+
+
+<br>
+
+
 #### Measuring Rhetorical Similarity with Supervised Machine Learning 
 **Working paper (currently under review) on the measurement of rhetorical similarity in political speech**
 
@@ -32,15 +52,6 @@ output:
   
 
 March 2020 -- today
-
-<br>
-
-#### Apart - Affective Polarization in Text
-**Collaborative project (with João Areal Neto and Phillip Mendoza) measuring hostility in parliaments using targeted sentiment analysis**
-
-<a href="https://github.com/nicolaiberk/Apart" class="fa fa-github" title = "GitHub"></a>
-
-September 2019 -- February 2020 
 
 <br>
 
@@ -148,6 +159,20 @@ April 2017 - March 2018, University of Vienna, Austria
 <a href = "https://viecer.univie.ac.at/blog/detail/news/silberstein-und-kern-hat-der-skandal-der-spoe-geschadet/?cHash=d87f628d8c10b27c101d3ffb1dbe240f&tx_news_pi15Baction5D=detail&tx_news_pi15Bcontroller5D=News" class = "fa fa-desktop" title = "Blogpost"></a> <a href = "https://derstandard.at/2000076132168/Causa-Silberstein-schadete-SPOe-viel-weniger-als-vermutet" class = "fa fa-newspaper-o" title =  "Newspaper Article"></a>
 
 March 2018
+
+
+### Dormant
+
+<br>
+
+#### Apart - Affective Polarization in Text
+**Collaborative project (with João Areal Neto and Phillip Mendoza) measuring hostility in parliaments using targeted sentiment analysis**
+
+<a href="https://github.com/nicolaiberk/Apart" class="fa fa-github" title = "GitHub"></a>
+
+September 2019 -- February 2020 
+
+
 
 </div>
 
