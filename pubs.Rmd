@@ -23,23 +23,28 @@ output:
 
 <br>
 
-#### Right-Wing Terrorist Attacks, the Media’s Reactions, and Radical Right Party Support
-**Project (with Werner Krause) studying media reactions to radical-right terrorism in Germany**
 
-<a href="https://github.com/nicolaiberk/_rrpviol_med" class="fa fa-github" title = "GitHub"></a>
+#### The Causal Effect of Media Frames on Issue Definitions
+**Dissertation project exploiting a natural shift in media framing to estimate the effect of media framing on voters' issue definitions**
 
-February 2021 -- today
+Working Paper <a href="https://raw.githubusercontent.com/nicolaiberk/bild/main/paper/Berk_Bild_Draft210531.pdf" class = "fa fa-file" title = "Paper" ></a> | 
+Github <a href="https://github.com/nicolaiberk/bild" class="fa fa-github" title = "GitHub"></a> |
+Slides <a href="https://raw.githubusercontent.com/nicolaiberk/bild/main/pres/Presentation_20210503.pdf"   class = "fa fa-image" title = "Slides" ></a>
+  
+
+March 2021 -- today
+
 
 
 <br>
 
-#### Using transfer learning to measure ideological bias
-**Project (with Tom Arend) assessing the performance of deep neural networks transferred from one domain (party press releases) to another (news)**
 
-<a href = "nlpdl_project.html" class = "fa fa-desktop" title = "Blogpost"></a> <a href="https://raw.githubusercontent.com/nicolaiberk/nlpdl_project/main/reports/final-report-latex/final-report.pdf" class = "fa fa-file" title = "Paper" ></a> <a href="https://github.com/nicolaiberk/nlpdl_project" class="fa fa-github" title = "GitHub"></a>
-  
+#### Right-Wing Terrorist Attacks, the Media’s Reactions, and Radical Right Party Support
+**Ongoing project (with Werner Krause) studying media reactions to radical-right terrorism in Germany**
 
-March 2021 -- today
+Github <a href="https://github.com/nicolaiberk/_rrpviol_med" class="fa fa-github" title = "GitHub"></a>
+
+February 2021 -- today
 
 
 <br>
@@ -47,11 +52,11 @@ March 2021 -- today
 
 
 #### Measuring Rhetorical Similarity with Supervised Machine Learning 
-**Working paper (currently under review) on the measurement of rhetorical similarity in political speech**
+**Working paper on the measurement of rhetorical similarity in political speech**
 
-<a href="https://github.com/nicolaiberk/SMLSE/raw/master/main.pdf" class = "fa fa-file" title = "Paper" ></a>
-<a href="https://github.com/nicolaiberk/SMLSE" class="fa fa-github" title = "GitHub"></a>
-<a href="https://www.dropbox.com/s/5zo85ak86hkujl0/Draft141020%20%281%29.pdf?dl=0"   class = "fa fa-image" title = "Slides" ></a>
+Working Paper <a href="https://github.com/nicolaiberk/SMLSE/raw/master/main.pdf" class = "fa fa-file" title = "Paper" ></a> | 
+Github <a href="https://github.com/nicolaiberk/SMLSE" class="fa fa-github" title = "GitHub"></a> | 
+Slides <a href="https://www.dropbox.com/s/5zo85ak86hkujl0/Draft141020%20%281%29.pdf?dl=0"   class = "fa fa-image" title = "Slides" ></a>
   
 
 March 2020 -- today
@@ -70,10 +75,24 @@ October 2018 -- November 2019
 <br>
 
 ### Presentations
+
+#### Hypodermic Needle After All? Individual-level moderators of framing effects
+**Presentation of working paper**
+
+Slides <a href="https://raw.githubusercontent.com/nicolaiberk/bild/main/pres/Presentation_20210503.pdf"   class = "fa fa-image" title = "Slides" ></a>
+  
+
+June 2020, EPSIP Colloquium, HU Berlin, Germany
+
+
+
+<br>
+
+
 #### Measuring Rhetorical Similarity with Supervised Machine Learning
 **Presentation of working paper**
 
-<a href="https://www.dropbox.com/s/5zo85ak86hkujl0/Draft141020%20%281%29.pdf?dl=0"   class = "fa fa-image" title = "Slides" ></a> <a href="https://github.com/nicolaiberk/SMLSE/raw/master/main.pdf" class = "fa fa-file" title = "Paper" ></a> <a href="https://github.com/nicolaiberk/SMLSE" class="fa fa-github" title = "GitHub"></a>
+Slides <a href="https://www.dropbox.com/s/5zo85ak86hkujl0/Draft141020%20%281%29.pdf?dl=0"   class = "fa fa-image" title = "Slides" ></a>
 
 October 2020, EPSIP Colloquium, HU Berlin, Germany
 
@@ -82,7 +101,7 @@ October 2020, EPSIP Colloquium, HU Berlin, Germany
 #### To lead or to follow? Mainstream parties’ strategies and radical right success in Germany
 **Presentation of an ongoing project at the [Hot Politics Lab](http://www.hotpolitics.eu/)**
 
-<a href="https://www.dropbox.com/s/xyupoug7rje3n16/To_lead_or_to_follow.pdf?dl=0"  class = "fa fa-image" title = "Slides"></a> <a href="github.com/nicolaiberk/ImEm" class = "fa fa-github" title = "GitHub"></a>
+Slides <a href="https://www.dropbox.com/s/xyupoug7rje3n16/To_lead_or_to_follow.pdf?dl=0"  class = "fa fa-image" title = "Slides"></a> | Github <a href="github.com/nicolaiberk/ImEm" class = "fa fa-github" title = "GitHub"></a>
 
 October 2019, University of Amsterdam, Netherlands
 
@@ -91,7 +110,7 @@ October 2019, University of Amsterdam, Netherlands
 #### Threat or Corrective? - The Causal Effect of Challenger Party Entrance on Political Trust
 **Presentation of a working paper at the 2019 Summer School of the ECPR Standing Group on Political Parties**
 
-<a href = "https://www.dropbox.com/s/krah2hbtidgc623/Challenger_Parties_and_Political_Trust__Presentation_for_ECPR_SG_Political_Parties_Summer_School%20%2811%29.pdf?dl=0"  class = "fa fa-image" title = "Slides"></a> <a href = "https://www.dropbox.com/s/6qp8nyr0dfriuwz/Berk_ThreatOrCorrective_WP.pdf?dl=0" class = "fa fa-file" title = "Paper"></a>
+Slides <a href = "https://www.dropbox.com/s/krah2hbtidgc623/Challenger_Parties_and_Political_Trust__Presentation_for_ECPR_SG_Political_Parties_Summer_School%20%2811%29.pdf?dl=0"  class = "fa fa-image" title = "Slides"></a> | Working Paper <a href = "https://www.dropbox.com/s/6qp8nyr0dfriuwz/Berk_ThreatOrCorrective_WP.pdf?dl=0" class = "fa fa-file" title = "Paper"></a>
 
 August 2019, University of Aarhus, Denmark
 
@@ -123,7 +142,7 @@ September - December 2020, Hertie School, Berlin, Germany
 #### EUSpeech v2.0. A dataset of 11,466 speeches by European Leaders
 **In charge of data collection using web-scrapers**
 
-<a href = "https://osf.io/c79ha/" class = "fa fa-database" title = "Dataset"></a>
+Dataset <a href = "https://osf.io/c79ha/" class = "fa fa-database" title = "Dataset"></a> | Paper
 <a href = "https://osf.io/preprints/socarxiv/a4uyw/" class = "fa fa-file" title = "Paper"></a>
 
 September 2018 -- July 2020, University of Amsterdam, Netherlands
@@ -133,7 +152,7 @@ September 2018 -- July 2020, University of Amsterdam, Netherlands
 #### AUTNES Online Panel Study 2017
 **Responsible for data cleaning, manual coding and preparation of questionnaires.**
 
-<a href = "https://data.aussda.at/dataset.xhtml?persistentId=doi:10.11587/I7QIYJ" class = "fa fa-database" title = "Dataset"></a>
+Dataset <a href = "https://data.aussda.at/dataset.xhtml?persistentId=doi:10.11587/I7QIYJ" class = "fa fa-database" title = "Dataset"></a>
 
 April 2017 - March 2018, University of Vienna, Austria
 
@@ -142,7 +161,7 @@ April 2017 - March 2018, University of Vienna, Austria
 #### AUTNES Comparative Study of Electoral Systems Post-Election Survey 2017
 **Responsible for data cleaning, manual coding and preparation of questionnaires.**
 
-<a href = "https://data.aussda.at/dataset.xhtml?persistentId=doi:10.11587/GDBBPJ" class = "fa fa-database" title = "Dataset"></a>
+Dataset <a href = "https://data.aussda.at/dataset.xhtml?persistentId=doi:10.11587/GDBBPJ" class = "fa fa-database" title = "Dataset"></a>
 
 April 2017 - March 2018, University of Vienna, Austria
 
@@ -159,19 +178,37 @@ April 2017 - March 2018, University of Vienna, Austria
 #### “Silberstein und Kern - hat der Skandal der SPÖ geschadet?”
 **Blog-post (Coauthored with Markus Wagner) on a scandal in the Austrian Lower House Election 2017; also covered by Austrian daily newspaper “Der Standard”.**
 
-<a href = "https://viecer.univie.ac.at/blog/detail/news/silberstein-und-kern-hat-der-skandal-der-spoe-geschadet/?cHash=d87f628d8c10b27c101d3ffb1dbe240f&tx_news_pi15Baction5D=detail&tx_news_pi15Bcontroller5D=News" class = "fa fa-desktop" title = "Blogpost"></a> <a href = "https://derstandard.at/2000076132168/Causa-Silberstein-schadete-SPOe-viel-weniger-als-vermutet" class = "fa fa-newspaper-o" title =  "Newspaper Article"></a>
+Blogpost <a href = "https://viecer.univie.ac.at/blog/detail/news/silberstein-und-kern-hat-der-skandal-der-spoe-geschadet/?cHash=d87f628d8c10b27c101d3ffb1dbe240f&tx_news_pi15Baction5D=detail&tx_news_pi15Bcontroller5D=News" class = "fa fa-desktop" title = "Blogpost"></a> | News article <a href = "https://derstandard.at/2000076132168/Causa-Silberstein-schadete-SPOe-viel-weniger-als-vermutet" class = "fa fa-newspaper-o" title =  "Newspaper Article"></a>
 
 March 2018
 
+<br>
+
+***
 
 ### Dormant
 
+
 <br>
+
+#### Using transfer learning to measure ideological bias
+**Project (with Tom Arend) assessing the performance of deep neural networks transferred from one domain (party press releases) to another (news)**
+
+Blogpost <a href = "nlpdl_project.html" class = "fa fa-desktop" title = "Blogpost"></a> | Report <a href="https://raw.githubusercontent.com/nicolaiberk/nlpdl_project/main/reports/final-report-latex/final-report.pdf" class = "fa fa-file" title = "Paper" ></a> | Github <a href="https://github.com/nicolaiberk/nlpdl_project" class="fa fa-github" title = "GitHub"></a>
+  
+
+March 2021 -- today
+
+
+
+<br>
+
+
 
 #### Apart - Affective Polarization in Text
 **Collaborative project (with João Areal Neto and Phillip Mendoza) measuring hostility in parliaments using targeted sentiment analysis**
 
-<a href="https://github.com/nicolaiberk/Apart" class="fa fa-github" title = "GitHub"></a>
+Github <a href="https://github.com/nicolaiberk/Apart" class="fa fa-github" title = "GitHub"></a>
 
 September 2019 -- February 2020 
 
