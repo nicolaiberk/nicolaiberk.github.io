@@ -28,7 +28,7 @@ output:
 **Dissertation project exploiting a natural shift in the media framing of migration to estimate the effect of framing on voters' issue definitions**
 
 [Working Paper](https://raw.githubusercontent.com/nicolaiberk/bild/main/paper/Berk_Bild_Draft210531.pdf) | 
-[Github](https://github.com/nicolaiberk/bild" class="fa fa-github) | 
+[Github](https://github.com/nicolaiberk/bild) | 
 [Slides](https://raw.githubusercontent.com/nicolaiberk/bild/main/pres/Presentation_20210503.pdf)
   
 
