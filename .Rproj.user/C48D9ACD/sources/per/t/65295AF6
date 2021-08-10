@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1628609683589.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "507379056",
+    "id" : "65295AF6",
+    "lastKnownWriteTime" : 1628609803,
+    "last_content_update" : 1628609803697,
+    "path" : "C:/Users/nicol/Dropbox/Allgemeines/Website/nicolaiberk.github.io/pubs.Rmd",
+    "project_path" : "pubs.Rmd",
+    "properties" : {
+        "cursorPosition" : "145,121",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
