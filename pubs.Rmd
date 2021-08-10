@@ -142,6 +142,15 @@ September - December 2020, Hertie School, Berlin, Germany
 
 <br>
 
+#### Word embeddings of German Newspaper articles
+**Word embedding model of over 2.2M German newspaper articles 2013-2021 (Bild, Frankfurter Allgemeine, Spiegel Online, Süddeutsche Zeitung, TAZ, Welt).**
+
+[Dataset](https://www.dropbox.com/s/xmljzunlx337dfz/word2vec.wordvectors?dl=1) | [Github](https://github.com/nicolaiberk/GermanNPEmbs)
+
+August 2021, HU Berlin, Germany
+
+<br>
+
 #### EUSpeech v2.0. A dataset of 11,466 speeches by European Leaders
 **In charge of data collection using web-scrapers**
 
