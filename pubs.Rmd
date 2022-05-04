@@ -10,7 +10,7 @@ output:
 <!-- # {.tabset .tabset-fade} -->
 
 <head>
-<title>Nicolai Berk - Political Science and Data Analysis | Academic Work</title>
+<title>Nicolai Berk | Academic Work</title>
 <meta name="description" content="These are some of the projects, papers, presentations, datasets, and other stuff I have been working on in the past.">
 </head>
 
@@ -63,8 +63,16 @@ March 2020 -- today
 
 <br>
 
+***
+
+<br>
+
+### Publications
+
+<br>
+
 #### "Die Nationalratswahl 2017 unter besonderer Berücksichtigung der Silberstein-Affäre"
-**Forthcoming book chapter in: "Blauer Band" (Eds. B. Weßels \& H. Schoen), co-authored with Julia Partheymüller and Jakob-Moritz Eberl**
+**Book chapter in: "Blauer Band" (Eds. B. Weßels \& H. Schoen), co-authored with Julia Partheymüller and Jakob-Moritz Eberl**
 
 October 2018 -- November 2019
 
@@ -75,6 +83,31 @@ October 2018 -- November 2019
 <br>
 
 ### Presentations
+
+<br>
+
+#### Migration, Crime and the Heterogeneous Impact of Emphasis Framing
+
+**Presentation of working paper**
+
+Nov 2021, Political Behavior and Institutions Section, Aarhus Universitet
+
+<br>
+
+#### Media Influence in Contemporary News Environments - Right-wing Media, Crime, and Anti-Immigration Attitudes
+**Presentation of working paper** 
+
+November 2021, Political Behavior Workshop Berlin-Brandenburg, WZB Berlin
+
+<br>
+
+
+#### The effect of changing news frames
+**Project presentation**
+
+[Slides](https://www.dropbox.com/s/hwoy5bmp2vxpt8x/PSAI_20211009.pdf?dl=0)
+
+October 2021, PSAI Conference, University College Dublin.
 
 <br>
 
@@ -127,10 +160,21 @@ August 2019, University of Aarhus, Denmark
 
 <br>
 
+#### Supervised Machine Learning with Imbalanced Data
+**Self-designed workshop introducing different techniques to deal with imbalanced data in supervised classification problems.**
+
+[Github](https://github.com/nicolaiberk/Imbalanced) | 
+[Slides](imbalance.html)
+
+May 2022, CompText Conference, Dublin, Ireland
+
+
+<br>
+
 #### Intro to R and Statistics
 **Taught two independent labs as addition to Prof. Mark Kayser's Stats I lecture for Master students, focusing on the R programming language**
 
-September - December 2020, Hertie School, Berlin, Germany
+September - December 2020 and 2021, Hertie School, Berlin, Germany
 
 <br>
 
