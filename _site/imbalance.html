@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Imbalanced Learning</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Nicolai Berk" />
+    <meta name="date" content="2022-05-04" />
+    <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+    <link rel="stylesheet" href="imbalance/xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+class: inverse, center, middle
+
+
+# **Imbalanced Learning**
+
+## How to Deal With Imbalanced Data in Supervised Classification Problems
+
+
+### Nicolai Berk&lt;sup&gt;*&lt;/sup&gt;
+
+### Tutorial at the 4th Annual **CompText** Conference 2022, Dublin
+
+2022-05-04
+
+
+.left[.footnote[&lt;sup&gt;*&lt;/sup&gt; Dynamics RTG &amp; Humboldt Universität Berlin]]
+
+---
+
+# Hi
+
+
+## I am Nicolai Berk
+
+- PhD Candidate at Dynamics RTG, Humboldt Universität zu Berlin
+- Interested in political discourse, specifically the making of political issues
+- Using **R**, sometimes **Python**
+- Analysing text for the past four years
+
+.center[
+
+[www |](nicolaiberk.com) [&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#68909c;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"&gt;&lt;/path&gt;&lt;/svg&gt; |](mailto:nicolai.berk@gmail.com) [&lt;svg viewBox="0 0 496 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#68909c;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"&gt;&lt;/path&gt;&lt;/svg&gt; |](https://github.com/nicolaiberk) [&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#68909c;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"&gt;&lt;/path&gt;&lt;/svg&gt;](https://twitter.com/nicolaiberk)
+
+]
+
+
+---
+
+
+# About this Class
+
+- Some familiarity with Python expected
+- Supervised ML = Bag-of-Words
+- Structure: Conceptual - Specific - Application
+
+---
+
+# Schedule
+
+.right-column[
+
+.footnote[
+
+| Time frame | Topic |
+|:------------- | -------------- | 
+|**First hour** | Intro to Supervised ML in Python | 
+| | Showcase of `scikit-learn` | 
+| | Small Coding Challenge | 
+|**Break** | |
+|**Second hour** | Intro to Imbalanced learning |
+| | Showcase of one of Sampling/SMOTE/Active Learning |
+| | If time: Questions |
+
+]
+]
+
+---
+
+class: middle, inverse, center
+
+# A Quick Introduction to Supervised Learning for Text Analysis (in Python)
+
+---
+
+class: centre, middle
+
+## Supervised learning (A **very** precise definition):
+
+# We know stuff about some documents and want to know about other documents.
+
+
+---
+
+# Some Lingo
+
+| Term  | Meaning  |
+| - | - |
+| **Classifier** | a statistical model fitted to some data to make predictions about different data. |
+| **Training** | The process of fitting the classifier to the data. |
+| **Train and test set** | Datasets used to train and evaluate the classifier. |
+| **Vectorizer** | A tool used to translate text into numbers. |
+
+
+---
+
+# The Classic Pipeline for Text Classification (BoW)
+
+.pull-left[
+
+0. Annotate subset.
+1. Divide into training- and test-set.
+2. Transform to Document-Term-Matrix.
+3. Fit model.
+4. Predict.
+5. Evaluate.
+
+]
+
+--
+
+.pull-right[
+
+### Implementation
+
+  The most popular package for statistical learning in python is called `scikit-learn`.
+
+![](https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png)
+
+]
+
+
+
+---
+
+# 0. Annotation
+
+.pull-left[
+
+
+- We need data from which to learn.
+- Assign labels to documents.
+- **Usually** randomly sampled.
+
+]
+
+.pull-right[
+
+
+
+
+&lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#68909c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#a3423c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#68909c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#68909c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#a3423c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt;
+--------- | --------- | --------- | --------- | ---------
+&lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#68909c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#68909c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#a3423c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#a3423c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#a3423c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#68909c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#a3423c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#68909c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#68909c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#68909c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#a3423c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#68909c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#68909c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#68909c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt; | &lt;svg viewBox="0 0 384 512" style="position:relative;display:inline-block;top:.1em;fill:#a3423c;height:2em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"&gt;&lt;/path&gt;&lt;/svg&gt;
+
+]
+
+
+
+
+---
+
+# 1. Divide into training- and test-set.
+
+
+```python
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(
+  X, y, test_size=0.33, random_state=42)
+```
+
+---
+
+# 2. Transformation
+
+Statistical models can only read numbers `\(\rightarrow\)` we need to **translate!**
+
+.pull-left[
+
+ID | Text
+-- | -----
+1  | This is a text
+2  | This is no text
+
+
+
+
+]
+
+.pull-right[
+
+ID | This | is | a | text | no |
+-- | ---- | -- | - | ---- | -- |
+1  | 1    | 1  | 1 | 1    | 0  |
+2  | 1    | 1  | 1 | 0    | 1  |
+
+
+]
+
+---
+
+# 2. Transformation - in scikit-learn
+
+### Transform text into Document-Term-Matrix
+
+
+```python
+from sklearn.feature_extraction.text import CountVectorizer
+vectorizer = CountVectorizer()
+
+sparse_mtrx = vectorizer.fit_transform(X_train)
+```
+
+
+---
+
+# 3. Fit model.
+
+.left-column[
+
+&lt;img src="imbalance_files/figure-html/unnamed-chunk-3-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+.right-column[
+
+
+
+### Fit the classifier to the training data
+
+
+```python
+## import the model
+from sklearn.linear_model import LogisticRegression
+clsfr = LogReg()
+
+## fit the classifier
+clsfr.fit(sparse_mtrx)
+```
+
+]
+
+---
+
+
+# 4. Predict.
+
+
+|review                                           |label |
+|:------------------------------------------------|:-----|
+|great movie!                                     |?     |
+|what a bunch of cr*p                             |?     |
+|I lost all faith in humanity after watching this |?     |
+
+
+---
+
+# 4. Predict - in scikit-learn
+
+
+```python
+X_test = vec.transform(X_test)
+y_pred = clsfr.predict(X_test)
+```
+
+
+
+|review                                           |label |
+|:------------------------------------------------|:-----|
+|great movie!                                     |good  |
+|what a bunch of cr*p                             |bad   |
+|I lost all faith in humanity after watching this |bad   |
+
+
+---
+
+# 5. Evaluation
+
+## Confusion Matrix
+
+
+|      | FALSE| TRUE|
+|:-----|-----:|----:|
+|FALSE |   644|   19|
+|TRUE  |    41|  296|
+
+
+
+---
+
+# 5. Evaluation
+
+.left-column[
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Precisionrecall.svg/525px-Precisionrecall.svg.png)
+
+]
+
+.right-column[
+
+### Relevant Metrics
+
+- **Accuracy**: How much does it get right overall?
+- **Recall**: How much of the relevant cases does it find?
+- **Precision**: How many of the found cases are relevant?
+- **F1 Score**: Weighted average of precision and recall.
+
+]
+
+---
+
+# 5. Evaluation in scikit-learn
+
+
+
+
+```python
+from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_score
+
+accuracy_score(y_test, y_pred)
+recall_score(y_test, y_pred)
+precision_score(y_test, y_pred)
+f1_score(y_test, y_pred)
+```
+
+
+---
+
+class: inverse, center, middle, hide-logo
+
+# A Quick Introduction to Supervised Learning
+
+## [**Script**](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/01_IntroSML_Tutorial.ipynb)
+
+---
+
+class: inverse, center, middle, hide-logo
+
+# Challenge!!!
+
+---
+
+# Your Turn
+
+- **Pair up** with your neighbor.
+- Open [this Colab notebook](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/Challenge.ipynb).
+- You have **15 minutes** to design the best classifier.
+
+
+---
+
+class: inverse, center, middle, hide-logo
+
+# Break Time
+
+![](https://media.giphy.com/media/S8DcNuvt1FUy31LUH6/giphy.gif)
+
+---
+
+class: center, middle
+
+# Imbalanced Data in Supervised Classification
+
+&lt;img src="imbalance_files/figure-html/unnamed-chunk-9-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Be me - in 2018
+
+--
+
+.pull-left[
+
+
+
+- blissful pre-pandemic, -war, and -PhD life.
+- Collect some press releases.
+- **Annotate 1000 of them** to figure out which are about migration.
+
+
+
+]
+
+--
+
+.pull-right[
+
+### **Only *28* about migration!**
+
+![Hide the pain](https://media1.giphy.com/media/7T33BLlB7NQrjozoRB/giphy.gif?cid=ecf05e47fs1pe5tc44bo69ui0dw2eu84tx8s8moddpu9l92p&amp;rid=giphy.gif&amp;ct=g)
+
+]
+
+---
+
+# *What* do you do?
+
+&lt;br&gt;
+
+.pull-left[
+
+- Use the classifier anyway?
+- More annotation?
+- What else?
+
+]
+
+.pull-left[
+
+&lt;img src="imbalance_files/figure-html/unnamed-chunk-10-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+---
+
+# Three approaches
+
+- **Stratified Sampling using Dictionary**: Define dictionary, count terms in documents, sample based on presence of relevant terms.
+- **Synthetic Minority Oversampling**: Generate additional minority cases.
+- **Active Learning**: Train classifier iteratively, sampling the most informative unlabelled observations.
+
+---
+
+# But what if we use the data like this?
+
+.left-column[
+
+![](https://media.giphy.com/media/hFROvOhBPQVRm/giphy.gif)
+
+]
+
+--
+
+.right-column[
+
+- **Best guess** in highly imbalanced data is simply the **most common outcome**.
+- Classifier won't find the cases we care about (also known as **very bad recall**).
+- See also [this script](https://github.com/nicolaiberk/Imbalanced/blob/master/ImbalancedProblem.ipynb).
+
+]
+
+
+
+---
+
+class: inverse, center, middle, hide-logo
+
+# Stratified Sampling
+
+---
+
+# Stratified Sampling
+
+.pull-left[
+
+- Generate dictionary for relevant concept&lt;sup&gt;1&lt;/sup&gt;.
+- Count relevant terms in texts to classify.
+- Pull stratified sample based on term counts.
+
+]
+
+.pull-right[
+
+&lt;img src="imbalance_files/figure-html/unnamed-chunk-11-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+
+]
+
+.footnote[&lt;sup&gt;1&lt;/sup&gt;potentially use dictionary extension)]
+
+---
+
+# Stratified Sampling in Python
+
+.pull-left[
+
+### Count
+
+
+```python
+for doc in X_train:
+  counter = 0
+  for w in word_tokenize(doc):
+    if w.lower() in extended_dict:
+      counter += 1
+  dict_freq.append(counter)
+```
+
+]
+
+--
+
+.pull-right[
+
+### Sample
+
+
+```python
+sample_low  = X_train[low_sample_ids]
+sample_mid  = X_train[mid_sample_ids]
+sample_high = X_train[high_sample_ids]
+```
+
+]
+
+
+---
+
+# Pros and Cons Stratified Sampling
+
+.pull-left[
+
+**Pros**
+- Simple
+- Computationally not intensive
+
+]
+
+.pull-right[
+
+**Cons**
+- Potential bias from dictionary
+- Has to be applied before annotation
+- Not always possible to define dictionary
+
+]
+
+
+---
+
+class: inverse, center, middle, hide-logo
+
+# **S**ynthetic **M**inority **O**versampling **TE**chnique
+
+---
+
+# SMOTE
+
+.left-column[
+
+&lt;img src="https://imbalanced-learn.org/stable/_images/sphx_glr_plot_illustration_generation_sample_001.png" width="115%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+.right-column[
+
+create additional **synthetic** observations in training data by:
+
+1. Select observation in minority class.
+2. Find `\(k\)` nearest neighbors (usually 5).
+3. Generate new case at a random distance in between the two.
+
+
+]
+
+
+---
+
+# SMOTE
+
+.center[
+
+
+&lt;img src="https://imbalanced-learn.org/stable/_images/sphx_glr_plot_illustration_generation_sample_001.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# SMOTE in Python
+
+
+
+
+```python
+from imblearn.over_sampling import SMOTE
+X_resample, y_resample = SMOTE(sampling_strategy = 0.2
+  ).fit_resample(X, y)
+```
+
+
+&lt;img src="imbalance/SMOTE_example.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+
+# Pros and Cons Stratified Sampling
+
+.pull-left[
+
+**Pros**
+- Can be applied after the data collection
+- Computationally not demanding
+- Can be combined with [undersampling](https://imbalanced-learn.org/dev/references/combine.html)
+- [Outperforms](https://arxiv.org/abs/1106.1813) pure undersampling and NaiveBayes with adjusted priors.
+
+]
+
+.pull-right[
+
+**Cons**
+- Does not add real information
+- We have to be [careful with cross validation](https://medium.com/lumiata/cross-validation-for-imbalanced-datasets-9d203ba47e8)
+
+]
+
+---
+
+
+class: center, inverse, middle
+
+# Active Learning
+
+---
+
+# Active Learning
+
+Idea:
+- Use classifier to find **most informative** samples to code.
+- Iteratively train the classifier.
+- More efficient training by smart sampling.
+
+---
+
+# Active Learning - Idea
+
+
+&lt;img src="imbalance/AL_Example.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+
+# Active Learning - Application
+
+1. **Cold Initialisation** with small random sample
+2. **Hot Phase**:
+  i) Generate uncertainty estimates for unlabelled data.
+  ii) Sample most informative observation(s).
+  iii) Annotate.
+  iv) Retrain classifier.
+  v) Repeat.
+  
+---
+
+# Active Learning - Application
+
+&lt;img src="imbalance/AL_Example.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+
+# Active Learning - Querying Strategies
+
+1. **Uncertainty/Margin Sampling**
+  - Select samples with most uncertain prediction.
+2. Query by Committee
+  - Use several classifiers, look at disagreement.
+3. Expected Model Change
+  - Add unlabelled observation to model using expected label, sample those which affect model most.
+
+See [Miller et al. 2020](http://www-personal.umich.edu/~wmebane/active-learning-approaches-4-18-2018.pdf) for more info.
+
+---
+
+# Active Learning in Python
+
+
+
+```python
+from modAL.models import ActiveLearner
+from modAL.uncertainty import uncertainty_sampling
+
+# initializing the learner
+learner = ActiveLearner(
+    estimator=LogReg(max_iter=1000),
+    X_training=X_start, y_training=y_start)
+
+# query for label
+query_idx, query_inst = learner.query(X_train)
+# supply new label for queried observation
+learner.teach(X_train[query_idx], y_new)
+```
+
+
+---
+
+# Poll
+
+.left-column[
+
+## Vote here
+
+![](imbalance/mentimeter_qr_code.png)
+
+]
+
+.right-column[
+
+
+
+
+&lt;div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'&gt;&lt;iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='300' src='https://www.mentimeter.com/app/presentation/2fbaac3ec20c3dca416116327eb90289/68887c1fd1cf/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 80%;' width='420'&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+]
+
+# Imbalanced Learning Scripts
+
+1. ![Stratified Dictionary Sampling](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02a_DictionarySampling_Solution.ipynb)
+2. ![SMOTE](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02b_SMOTE_Tutorial.ipynb)
+3. ![Active Learning](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02c_ActiveLearning_Tutorial.ipynb)
+
+
+---
+
+# So now what?
+
+- You've seen different ways to deal with imbalanced data.
+- Note that they are **complimentary**, e.g.:
+  + Initialise Active Learner with stratified dictionary sample.
+  + Over- and undersample dictionary sample.
+- Check out the different notebooks!
+- Questions?
+
+---
+
+class: center, middle, inverse
+
+# Thank you!
+
+
+  
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightLanguage": "python",
+"highlightStyle": "monokai",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
