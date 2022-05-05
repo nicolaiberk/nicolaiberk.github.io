@@ -7,7 +7,7 @@ date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
     seal: false
-    css: imbalance/xaringan-themer.css
+    css: xaringan-themer.css
     lib_dir: libs
     nature:
       highlightLanguage: python
@@ -140,7 +140,7 @@ class: centre, middle
 
 ## Supervised learning (A **very** precise definition):
 
-# We know stuff about some documents and want to know about other documents.
+# We know stuff about some documents and want to know the same stuff about other documents.
 
 
 ---
@@ -750,7 +750,7 @@ knitr::include_graphics("imbalance/SMOTE_example.png")
 
 ---
 
-# Pros and Cons Stratified Sampling
+# Pros and Cons SMOTE
 
 .pull-left[
 
@@ -856,6 +856,26 @@ query_idx, query_inst = learner.query(X_train)
 learner.teach(X_train[query_idx], y_new)
 ```
 
+---
+
+# Pros and Cons Active Learning
+
+.pull-left[
+
+**Pros**
+- Likely most informed approach.
+- Can be combined with dictionary sampling.
+
+]
+
+.pull-right[
+
+**Cons**
+- Computationally demanding
+- Have to have infrastructure for annotation in place (but there are nice [packages](https://rubrix.readthedocs.io/en/stable/tutorials/05-active_learning.html) for this)
+
+]
+
 
 ---
 
@@ -878,11 +898,13 @@ learner.teach(X_train[query_idx], y_new)
 
 ]
 
+---
+
 # Imbalanced Learning Scripts
 
-1. ![Stratified Dictionary Sampling](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02a_DictionarySampling_Solution.ipynb)
-2. ![SMOTE](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02b_SMOTE_Tutorial.ipynb)
-3. ![Active Learning](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02c_ActiveLearning_Tutorial.ipynb)
+1. [Stratified Dictionary Sampling](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02a_DictionarySampling_Solution.ipynb)
+2. [SMOTE](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02b_SMOTE_Tutorial.ipynb)
+3. [Active Learning](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02c_ActiveLearning_Tutorial.ipynb)
 
 
 ---
