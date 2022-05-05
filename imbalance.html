@@ -4,9 +4,9 @@
     <title>Imbalanced Learning</title>
     <meta charset="utf-8" />
     <meta name="author" content="Nicolai Berk" />
-    <meta name="date" content="2022-05-04" />
+    <meta name="date" content="2022-05-05" />
     <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
-    <link rel="stylesheet" href="imbalance/xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -29,7 +29,7 @@ class: inverse, center, middle
 
 ### Tutorial at the 4th Annual **CompText** Conference 2022, Dublin
 
-2022-05-04
+2022-05-05
 
 
 .left[.footnote[&lt;sup&gt;*&lt;/sup&gt; Dynamics RTG &amp; Humboldt Universität Berlin]]
@@ -95,7 +95,7 @@ class: centre, middle
 
 ## Supervised learning (A **very** precise definition):
 
-# We know stuff about some documents and want to know about other documents.
+# We know stuff about some documents and want to know the same stuff about other documents.
 
 
 ---
@@ -600,7 +600,7 @@ X_resample, y_resample = SMOTE(sampling_strategy = 0.2
 
 ---
 
-# Pros and Cons Stratified Sampling
+# Pros and Cons SMOTE
 
 .pull-left[
 
@@ -699,6 +699,26 @@ query_idx, query_inst = learner.query(X_train)
 learner.teach(X_train[query_idx], y_new)
 ```
 
+---
+
+# Pros and Cons Active Learning
+
+.pull-left[
+
+**Pros**
+- Likely most informed approach.
+- Can be combined with dictionary sampling.
+
+]
+
+.pull-right[
+
+**Cons**
+- Computationally demanding
+- Have to have infrastructure for annotation in place (but there are nice [packages](https://rubrix.readthedocs.io/en/stable/tutorials/05-active_learning.html) for this)
+
+]
+
 
 ---
 
@@ -721,11 +741,13 @@ learner.teach(X_train[query_idx], y_new)
 
 ]
 
+---
+
 # Imbalanced Learning Scripts
 
-1. ![Stratified Dictionary Sampling](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02a_DictionarySampling_Solution.ipynb)
-2. ![SMOTE](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02b_SMOTE_Tutorial.ipynb)
-3. ![Active Learning](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02c_ActiveLearning_Tutorial.ipynb)
+1. [Stratified Dictionary Sampling](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02a_DictionarySampling_Solution.ipynb)
+2. [SMOTE](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02b_SMOTE_Tutorial.ipynb)
+3. [Active Learning](https://colab.research.google.com/github/nicolaiberk/Imbalanced/blob/master/02c_ActiveLearning_Tutorial.ipynb)
 
 
 ---
