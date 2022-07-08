@@ -27,22 +27,44 @@ output:
 #### The Causal Effect of Media Frames on Issue Definitions
 **Dissertation project exploiting a natural shift in the media framing of migration to estimate the effect of framing on voters' issue definitions**
 
-[Working Paper](https://raw.githubusercontent.com/nicolaiberk/bild/main/paper/Berk_Bild_Draft210531.pdf) | 
+
+[Working Paper](https://github.com/nicolaiberk/bild/raw/main/paper/Manuscript_Framing.pdf) | 
 [Github](https://github.com/nicolaiberk/bild) | 
-[Slides](https://raw.githubusercontent.com/nicolaiberk/bild/main/pres/Presentation_20210503.pdf)
+[Slides](https://github.com/nicolaiberk/bild/raw/main/pres/Presentation.pdf)
   
 
 March 2021 -- today
 
 
+<br>
+
+
+#### Frame Competition
+**Dissertation project assessing the impact of issue framing in the media on party competition**
+
+[Working Paper](https://github.com/nicolaiberk/FrameCompetition/raw/main/paper/Manuscript.pdf) | 
+[Github](https://github.com/nicolaiberk/FrameCompetition)
+
+July 2022 -- today
+
 
 <br>
 
 
+#### Leading by Example? How Elite Behaviour affects Individual Vaccination Decisions
+**Ongoing project assessing the impact of party cues on vaccination behaviour**
+
+[Github](https://github.com/nicolaiberk/PartyVac) | 
+[Slides](https://github.com/nicolaiberk/PartyVac/raw/main/pres/Presentation.pdf)
+
+May 2022 -- today
+
+
+
+<br>
+
 #### Right-Wing Terrorist Attacks, the Media’s Reactions, and Radical Right Party Support
 **Ongoing project (with Werner Krause) studying media reactions to radical-right terrorism in Germany**
-
-[Github](https://github.com/nicolaiberk/_rrpviol_med)
 
 February 2021 -- today
 
@@ -84,13 +106,55 @@ October 2018 -- November 2019
 
 ### Presentations
 
+
+<br>
+
+
+#### Framing Effects in the Wild - Does News Framing Affect Public Opinion?
+
+**Conference Presentation**
+
+[Working Paper](https://github.com/nicolaiberk/bild/raw/EPSA22/paper/Manuscript_Framing.pdf) | 
+[Slides](https://github.com/nicolaiberk/bild/raw/EPSA22/pres/Presentation.pdf)
+
+June 2022, Conference of the European Political Science Association, Prague
+
+
+<br>
+
+#### Leading by Example? How Elite Behaviour affects Individual Vaccination Decisions
+
+**Presentation of project idea**
+
+June 2022, Political Behavior Workshop at Aarhus Universitet and EPSIP Colloquium HU Berlin
+
+
+<br>
+
+
+#### The Effect of News Framing on Issue Attitudes and Voting Behaviour
+
+**Conference Presentation**
+
+May 2022, Conference of the International Communication Association, Paris
+
+
+<br>
+
+#### Assessing Media Influence in Contemporary News Environments - Right-wing Media, Crime, and Anti-Immigration Attitudes
+
+**Conference Presentation**
+
+April 2022, European Graduate Network Conference, Florence
+
+
 <br>
 
 #### Migration, Crime and the Heterogeneous Impact of Emphasis Framing
 
 **Presentation of working paper**
 
-Nov 2021, Political Behavior and Institutions Section, Aarhus Universitet
+March 2022, Political Behavior and Institutions Section, Aarhus Universitet
 
 <br>
 
