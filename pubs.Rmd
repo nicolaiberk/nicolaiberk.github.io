@@ -23,10 +23,12 @@ output:
 
 <br>
 
-
 #### The Causal Effect of Media Frames on Issue Definitions
 **Dissertation project exploiting a natural shift in the media framing of migration to estimate the effect of framing on voters' issue definitions**
 
+```{r bildimage, echo=F, fig.height=10}
+knitr::include_graphics("https://raw.githubusercontent.com/nicolaiberk/bild/main/pres/Presentation_files/figure-html/trendplot-1.svg")
+```
 
 [Working Paper](https://github.com/nicolaiberk/bild/raw/main/paper/Manuscript_Framing.pdf) | 
 [Github](https://github.com/nicolaiberk/bild) | 
@@ -38,17 +40,44 @@ March 2021 -- today
 
 <br>
 
+#### Measuring Rhetorical Similarity with Supervised Machine Learning 
+**Working paper on the measurement of rhetorical similarity in political speech**
+
+```{r smlseplot, echo=F}
+
+knitr::include_graphics("https://github.com/nicolaiberk/SMLSE/blob/master/DE/vis/DE_speakers.png?raw=true")
+
+```
+
+[Working Paper](https://github.com/nicolaiberk/SMLSE/raw/master/main.pdf) | 
+[Github](https://github.com/nicolaiberk/SMLSE) | 
+[Slides](https://www.dropbox.com/s/5zo85ak86hkujl0/Draft141020%20%281%29.pdf?dl=0)
+  
+
+March 2020 -- today
+
+<br>
 
 #### Frame Competition
 **Dissertation project assessing the impact of issue framing in the media on party competition**
+
+```{r vectorimage, echo=F}
+
+knitr::include_graphics("https://raw.githubusercontent.com/nicolaiberk/FrameCompetition/main/pres/Presentation_files/figure-html/vectors-1.svg")
+
+```
+
+
 
 [Working Paper](https://github.com/nicolaiberk/FrameCompetition/raw/main/paper/Manuscript.pdf) | 
 [Github](https://github.com/nicolaiberk/FrameCompetition)
 
 July 2022 -- today
 
-
 <br>
+
+
+
 
 
 #### Leading by Example? How Elite Behaviour affects Individual Vaccination Decisions
@@ -69,19 +98,6 @@ May 2022 -- today
 February 2021 -- today
 
 
-<br>
-
-
-
-#### Measuring Rhetorical Similarity with Supervised Machine Learning 
-**Working paper on the measurement of rhetorical similarity in political speech**
-
-[Working Paper](https://github.com/nicolaiberk/SMLSE/raw/master/main.pdf) | 
-[Github](https://github.com/nicolaiberk/SMLSE) | 
-[Slides](https://www.dropbox.com/s/5zo85ak86hkujl0/Draft141020%20%281%29.pdf?dl=0)
-  
-
-March 2020 -- today
 
 <br>
 
@@ -168,8 +184,6 @@ November 2021, Political Behavior Workshop Berlin-Brandenburg, WZB Berlin
 
 #### The effect of changing news frames
 **Project presentation**
-
-[Slides](https://www.dropbox.com/s/hwoy5bmp2vxpt8x/PSAI_20211009.pdf?dl=0)
 
 October 2021, PSAI Conference, University College Dublin.
 
