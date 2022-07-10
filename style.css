@@ -1,13 +1,13 @@
 
 body {
-  background-color:white;
-  font-family: 'Lato', sans-serif;
+  background-color:#68909c;
+  font-family: 'Lato', bold;
 }
 
 body{
-color: black; 
-text-align:justify;
-font-size:16px;
+  color: black;
+  text-align:justify;
+  font-size:16px;
 }
 
 img {
@@ -26,28 +26,27 @@ h1, .h1 {
 
 
 h2, .h2 {
-  color: #0e5484;
-  text-decoration: underline;
+  color: black;
 }
 
 h3, .h3  {
     margin-top: 18px;
-    color: #0e5484;
+    color: black;
 }
 
 h4, .h4  {
     margin-top: 12px;
-    color: #0e5484;
+    color: black;
 }
 
 /* link */
-a, .navbar-default .navbar-nav > .active > a {
-  color: #0e5484;
+a {
+  color: black;
 }
 
 a:active, a:hover{
-  color: #0e5484;
-  text-decoration: underline;
+  color: white;
+  text-decoration:none;
 }
 
 a p {
@@ -59,7 +58,7 @@ a:hover p {
 }
 
 span {
-  color: #0e5484;
+  color: white;
   font-weight: bold;
 }
 
@@ -70,21 +69,9 @@ span {
 
 /* brand name in menu */
 .navbar-default .navbar-brand {
-  color: #0e5484;
+  color: #68909c;
 }
 
-.btn-default, .nav-pills:active>a {
-    color: #e7e7e7;
-    background-color: white;
-    border-color: white;
-}
-
-.navbar-default{
-  background-color: #e7e7e7;
-}
-
-.nav-pills:hover>a, .nav-pills>li>a, .navbar-default .navbar-nav>li>a:hover  {
-    color: black;
-    background-color: white;
-    border-color: white;
+.navbar-default:active {
+  background-color: #68909c;
 }
