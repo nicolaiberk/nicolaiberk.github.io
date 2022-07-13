@@ -7,7 +7,7 @@ date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
     seal: false
-    css: xaringan-themer.css
+    css: imbalance.css
     lib_dir: libs
     nature:
       highlightLanguage: python
@@ -30,14 +30,15 @@ style_mono_dark(
   header_h3_font_size = "1.1rem",
   header_background_auto = T,
   text_font_google =  google_font("Oswald"),
-  code_font_size = "24px"
+  code_font_size = "24px",
+  outfile = "imbalance.css"
   )
 
 ```
 
 ```{r setup, include=FALSE}
 
-knitr::opts_chunk$set(echo = FALSE, message = F, warning = F, cache = T, out.width="80%", fig.height=4, fig.width=10, fig.align='center', eval = T, dev = "svg")
+knitr::opts_chunk$set(echo = FALSE, message = F, warning = F, cache = F, out.width="80%", fig.height=4, fig.width=10, fig.align='center', eval = T, dev = "svg")
 # knitr::opts_knit$set(root.dir = 'C:/Users/nicol/Dropbox/PhD/Papers/Bild/github/bild')
 
 # add css
@@ -48,7 +49,7 @@ new_css <-
 
 "
 write(new_css,
-      file = "xaringan-themer.css",
+      file = "imbalance.css",
       append = TRUE)
 
 library(tidyverse)
@@ -298,7 +299,7 @@ df %>%
   ggplot(aes(x, y)) +
   geom_point() +
   geom_smooth(method = 'lm', )+
-  theme_xaringan()
+  theme_xaringan(css_file = "imbalance.css")
 
 
 ```
@@ -471,7 +472,7 @@ rnorm(1000) %>%
   ggplot(aes(X, Y, col = group)) +
   geom_point() +
   geom_abline(slope = 2, intercept = -3.5, col = "#68909c", lty = 2, size = 1.5) +
-  theme_xaringan() +
+  theme_xaringan(css_file = "imbalance.css") +
   scale_xaringan_color_discrete(color = "#a3423c") +
   theme(legend.position = "None") +
   scale_y_continuous(breaks = NULL) +
@@ -530,7 +531,7 @@ round(rbeta(1000, 0.1, 1), 0 ) %>%
   as.tibble() %>% 
   ggplot(aes(value)) +
   geom_histogram(binwidth = 0.5) +
-  theme_xaringan()
+  theme_xaringan(css_file = "imbalance.css")
   
 ```
 
@@ -605,7 +606,7 @@ counts %>%
   ggplot(aes(x = value)) +
   geom_bar(aes(fill = as.character(sample_T))) +
   # geom_hline(yintercept = 20, col = "#a3423c", lty = 2, size = 2) +
-  theme_xaringan() +
+  theme_xaringan(css_file = "imbalance.css") +
   scale_fill_manual(values = c("#68909c", "#a3423c"), 
                     labels = c("False", "True")) +
   labs(fill = "Sample") +
