@@ -119,6 +119,62 @@ October 2018 -- November 2019
 
 <br>
 
+### Teaching
+
+<br>
+
+#### Supervised Machine Learning with Imbalanced Data
+<div class="st">Self-designed workshop introducing different techniques to deal with imbalanced data in supervised classification problems.</div>
+
+[Github](https://github.com/nicolaiberk/Imbalanced) | 
+[Slides](imbalance.html)
+
+May 2022, CompText Conference, Dublin, Ireland
+
+
+<br>
+
+#### Intro to R and Statistics
+<div class="st">Taught two independent labs as addition to Prof. Mark Kayser's Stats I lecture for Master students, focusing on the R programming language</div>
+
+September - December 2020 and 2021, Hertie School, Berlin, Germany
+
+<br>
+
+***
+
+<br>
+
+
+### Blog-posts
+
+<br>
+
+#### Using transfer learning to measure ideological bias
+<div class="st">Project (with Tom Arend) assessing the performance of deep neural networks transferred from one domain (party press releases) to another (news).</div>
+
+[Blogpost](nlpdl_project.html) | 
+[Report](https://raw.githubusercontent.com/nicolaiberk/nlpdl_project/main/reports/final-report-latex/final-report.pdf) | 
+[Github](https://github.com/nicolaiberk/nlpdl_project)
+
+March 2021 -- today
+
+<br>
+
+#### “Silberstein und Kern - hat der Skandal der SPÖ geschadet?”
+<div class="st">Blog-post (Coauthored with Markus Wagner) on a scandal in the Austrian Lower House Election 2017; also covered by Austrian daily newspaper “Der Standard”.</div>
+
+[Blogpost](https://viecer.univie.ac.at/blog/detail/news/silberstein-und-kern-hat-der-skandal-der-spoe-geschadet/?cHash=d87f628d8c10b27c101d3ffb1dbe240f&tx_news_pi15Baction5D=detail&tx_news_pi15Bcontroller5D=News) | 
+[News article](https://derstandard.at/2000076132168/Causa-Silberstein-schadete-SPOe-viel-weniger-als-vermutet)
+
+March 2018
+
+<br>
+
+***
+
+<br>
+
 ### Presentations
 
 <br>
@@ -130,7 +186,7 @@ October 2018 -- November 2019
 [Working Paper](https://github.com/nicolaiberk/FrameCompetition/raw/OXBER/paper/Manuscript.pdf) | 
 [Slides](https://github.com/nicolaiberk/FrameCompetition/raw/OXBER/pres/Presentation.pdf)
 
-June 2022, Conference of the European Political Science Association, Prague
+July 2022, OX|BER Graduate Workshop on Political Behaviour and Comparative Political Economy, Berlin
 
 <br>
 
@@ -236,62 +292,6 @@ October 2019, University of Amsterdam, Netherlands
 [Working Paper](https://www.dropbox.com/s/6qp8nyr0dfriuwz/Berk_ThreatOrCorrective_WP.pdf?dl=0)
 
 August 2019, University of Aarhus, Denmark
-
-<br>
-
-***
-
-<br>
-
-### Teaching
-
-<br>
-
-#### Supervised Machine Learning with Imbalanced Data
-<div class="st">Self-designed workshop introducing different techniques to deal with imbalanced data in supervised classification problems.</div>
-
-[Github](https://github.com/nicolaiberk/Imbalanced) | 
-[Slides](imbalance.html)
-
-May 2022, CompText Conference, Dublin, Ireland
-
-
-<br>
-
-#### Intro to R and Statistics
-<div class="st">Taught two independent labs as addition to Prof. Mark Kayser's Stats I lecture for Master students, focusing on the R programming language</div>
-
-September - December 2020 and 2021, Hertie School, Berlin, Germany
-
-<br>
-
-***
-
-<br>
-
-
-### Blog-posts
-
-<br>
-
-#### Using transfer learning to measure ideological bias
-<div class="st">Project (with Tom Arend) assessing the performance of deep neural networks transferred from one domain (party press releases) to another (news).</div>
-
-[Blogpost](nlpdl_project.html) | 
-[Report](https://raw.githubusercontent.com/nicolaiberk/nlpdl_project/main/reports/final-report-latex/final-report.pdf) | 
-[Github](https://github.com/nicolaiberk/nlpdl_project)
-
-March 2021 -- today
-
-<br>
-
-#### “Silberstein und Kern - hat der Skandal der SPÖ geschadet?”
-<div class="st">Blog-post (Coauthored with Markus Wagner) on a scandal in the Austrian Lower House Election 2017; also covered by Austrian daily newspaper “Der Standard”.</div>
-
-[Blogpost](https://viecer.univie.ac.at/blog/detail/news/silberstein-und-kern-hat-der-skandal-der-spoe-geschadet/?cHash=d87f628d8c10b27c101d3ffb1dbe240f&tx_news_pi15Baction5D=detail&tx_news_pi15Bcontroller5D=News) | 
-[News article](https://derstandard.at/2000076132168/Causa-Silberstein-schadete-SPOe-viel-weniger-als-vermutet)
-
-March 2018
 
 <br>
 
