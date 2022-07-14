@@ -106,9 +106,8 @@ data.frame(
   Issue = c("A's", "B's", "A's", "B's"),
   Votes = c(0.3, 0.1, 0.1, 0.3)
 ) %>% 
-  ggplot(aes(Issue, Votes, col = Party)) +
-  geom_point(size = 4) +
-  geom_line(aes(group = Party), size = 2) +
+  ggplot(aes(Issue, Votes, fill = Party)) +
+  geom_col(position = "dodge2") +
   theme_xaringan(css_file = "oxber.css") +
   xlab("Salient Issue")
 
