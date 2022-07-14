@@ -1,0 +1,23 @@
+"0","library(RefManageR)"
+"2","Warning:"
+"2"," package ‘RefManageR’ was built under R version 4.1.2
+"
+"0","BibOptions(check.entries = FALSE, "
+"0","           bib.style = ""authoryear"","
+"0","           cite.style = ""authoryear"","
+"0","           style = ""markdown"","
+"0","           hyperlink = FALSE,"
+"0","           max.names = 2, "
+"0","           longnamesfirst = F,"
+"0","           dashed = FALSE)"
+"0","myBib <- ReadBib(""C:/Users/nicol/Dropbox/Studium/BibTex/PhD.bib"", check = FALSE)"
+"2","Loading required namespace: bibtex
+"
+"2","Warning in bibtex::do_read_bib(file, encoding = .Encoding, srcfile) :"
+"2","
+ "
+"2"," 
+C:/Users/nicol/Dropbox/Studium/BibTex/PhD.bib:228:0
+	syntax error, unexpected TOKEN_LITERAL, expecting TOKEN_COMMA
+	Dropping the entry `DruckmanJamesN.` (starting at line 228) 
+"
