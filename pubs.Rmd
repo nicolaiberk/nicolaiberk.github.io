@@ -12,7 +12,8 @@ output:
 <head>
 <title>Nicolai Berk | Academic Work</title>
 <meta name="twitter:card" content="summary">
-<meta property='og:title' content="Nicolai Berk | Academic Work">
+<meta property="og:title" content="Nicolai Berk | Academic Work">
+<meta property="og:type" content="website" />
 <meta property="og:description" content="These are some of the projects, papers, presentations, datasets, and other stuff I have been working on in the past.">
 <meta property="og:image" content="https://raw.githubusercontent.com/nicolaiberk/bild/main/pres/Presentation_files/figure-html/trendplot-1.svg">
 <meta property="og:url" content="https://nicolaiberk.com/pubs.html">
