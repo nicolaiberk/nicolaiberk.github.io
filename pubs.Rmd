@@ -45,7 +45,7 @@ March 2021 -- today
 
 ```{r smlseplot, echo=F}
 
-knitr::include_graphics("https://github.com/nicolaiberk/SMLSE/blob/master/DE/vis/DE_speakers.png?raw=true")
+knitr::include_graphics("https://github.com/nicolaiberk/SMLSE/blob/master/DE/vis/DE_speakers_presi.png?raw=true")
 
 ```
 
