@@ -1,0 +1,45 @@
+---
+title: "Nicolai Berk"
+output:
+  html_document:
+    css: "style.css"
+    includes:
+      after_body: footer.html
+      in_header: header.html
+---
+
+
+<head>
+<title>Nicolai Berk | About</title>
+<meta property='og:title' content="Nicolai Berk | About">
+<meta property="og:description" content="I am a PhD Candidate in Political Science at the Dynamics Research Training Group and the Chair of Comparative Politics at the Humboldt University Berlin.">
+<meta property="og:image" content="https://nicolaiberk.com/pics/me_cropped.JPG">
+</head>
+
+
+<div class = "col-md-10">
+
+
+<h2>Hi, and welcome to my Website!</h2>
+
+<br>
+
+<div class = "col-md-6" >
+
+<img src="pics/me_cropped.JPG" alt="Nicolai Berk" style="vertical-align:middle;margin:0px -12px"> 
+
+</div>
+
+<div class = "intro">
+
+My name is Nicolai Berk, I am a PhD Candidate at the [Dynamics Research Training Group](https://www.sowi.hu-berlin.de/en/dynamics/about) and the [Group for Comparative Politics at Humboldt University Berlin](https://www.sowi.hu-berlin.de/en/lehrbereiche-en/comppol-en/team-comparative-politics).
+
+My main interest revolves around political communication and its effects on elites' and voters' cognitive representations of politics. Among other things, this concerns how news framing affects [political attitudes](https://github.com/nicolaiberk/bild/raw/main/paper/Manuscript_Framing.pdf) and [voting behaviour](https://github.com/nicolaiberk/FrameCompetition/raw/main/paper/Manuscript.pdf) in the real world. To study these topics, I combine computational text analysis and econometric tools. I also did some work on the [measurement of radical-right rhetoric and its adoption by other parties](https://github.com/nicolaiberk/SMLSE/raw/master/main.pdf).
+
+Before moving to Berlin, I obtained a Bachelor of Arts in Political Science from the University of Vienna and a Master of Science in Social Science from the University of Amsterdam. In Vienna, I was working as a Research Assistant to [Markus Wagner](https://staatswissenschaft.univie.ac.at/en/team/scientific-staff/markus-wagner/), mainly on the [Austrian National Election Study (AUTNES)](https://data.aussda.at/dataset.xhtml?persistentId=doi:10.11587/I7QIYJ). In Amsterdam, I worked for  [Gijs Schumacher](https://www.uva.nl/en/profile/s/c/g.schumacher/g.schumacher.html), mainly collecting data for [EUSpeech V2](https://osf.io/c79ha/). Gijs also invited me to the [Hot Politics Lab](http://www.hotpolitics.eu/).
+
+This website contains some information about my [academic work, teaching and publications](pubs.html), my [CV](https://www.dropbox.com/sh/xar45ns5igvprca/AACU7Fq2kCl25AN6kfGxDHkAa?dl=0), as well as some blog posts explaining my work.
+
+</div>
+
+</div>
